@@ -1,0 +1,40 @@
+.row {
+    margin-top: 3%;
+}
+
+.col-sm-6 {
+    margin-left: 3%;
+    margin-right: 20px;
+    background-color: #edf0f4;
+    border: solid lightsteelblue;
+    border-width: thin;
+    border-radius: 5px;
+}
+
+.col-sm-5 {
+    margin-right: 3%;
+    background-color: #edf0f4;
+    border: solid lightsteelblue;
+    border-width: thin;
+    border-radius: 5px;
+}
+
+.hist_grades {
+    padding: 30px;
+}
+
+.lower_grades {
+    padding: 30px;
+}
+
+.row h4 {
+    color: #c40000;
+    font-weight: bold;
+    font-family: "Times New Roman", Georgia, Serif;
+    font-size: 25px;
+}
+
+.row p {
+    font-family: "Times New Roman", Georgia, Serif;
+    font-size: medium;
+}
