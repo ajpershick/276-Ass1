@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/stylesheets/ass1_styles.css">
+    <link rel="stylesheet" href="../app/assets/stylesheets/ass1_styles.css">
 </head>
 <body>
 
@@ -15,40 +15,149 @@
         <div class="col-sm-6">
             <h4>Lower bounds</h4>
             <div class="lower_grades">
-                <p>Max</p><br>
-                <p>A+</p><br>
-                <p>A</p><br>
-                <p>A-</p><br>
-                <p>B+</p><br>
-                <p>B</p><br>
-                <p>B-</p><br>
-                <p>C+</p><br>
-                <p>C</p><br>
-                <p>C-</p><br>
-                <p>D</p><br>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>Max</p>
+                    </div>
+                        <div class="col-xs-9">
+                            <textarea id="Max"> "></textarea>
+                        </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>A+ </p>
+                    </div>
+                    <div class="col-xs-9">
+                    <textarea itemtype="number" id="A+" onkeyup="calculate()"></textarea>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                <p>A </p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea itemtype="number" id="A" onkeyup="calculate()"></textarea>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                <p>A- </p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea itemtype="number" id="A-" onkeyup="calculate()"></textarea>                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                <p>B+ </p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea itemtype="number" id="B+" onkeyup="calculate()"></textarea>                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                <p>B </p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea itemtype="number" id="B" onkeyup="calculate()"></textarea>                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                <p>B- </p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea itemtype="number" id="B-" onkeyup="calculate()"></textarea>                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                <p>C+</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea itemtype="number" id="C+" onkeyup="calculate();"></textarea>                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                <p>C</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea itemtype="number" id="C" onkeyup="calculate();"></textarea>                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                <p>C-</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea itemtype="number" id="C-" onkeyup="calculate(); "></textarea>                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                <p>D </p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea itemtype="number" id="D" onkeyup="calculate(); "></textarea>                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
                 <p>F</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea itemtype="number" id="F" onkeyup="calculate(); "></textarea>                    </div>
+
+                </div>
             </div>
         </div>
-
         <div class="col-sm-5">
             <h4>Histogram</h4>
             <div class="hist_grades">
-                <p>A+</p>
-                <p>A</p>
-                <p>A-</p>
-                <p>B+</p>
+                <p>A+ </p>
+                <div id="hist1"></div>
+
+                <p>A </p>
+                <div id="hist2"></div>
+
+                <p>A- </p>
+                <div id="hist3"></div>
+
+                <p>B+ </p>
+                <div id="hist4"></div>
+
                 <p>B</p>
+                <div id="hist5"></div>
+
                 <p>B-</p>
-                <p>C+</p>
-                <p>C</p>
-                <p>C-</p>
-                <p>D</p>
-                <p>F</p>
+                <div id="hist6"></div>
+
+                <p>C+ </p>
+                <div id="hist7"></div>
+
+                <p>
+                <div id="hist8"></div>
+                </p>
+                <p>A-
+                <div id="hist9"></div>
+                </p>
+                <p>A-
+                <div id="hist10"></div>
+                </p>
+                <p>A-
+                <div id="hist11"></div>
+                </p>
+
             </div>
         </div>
     </div>
 </div>
-
+<script src="../app/assets/javascripts/calculate.js"></script>
 </body>
 </html>
 

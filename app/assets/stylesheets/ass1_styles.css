@@ -1,5 +1,6 @@
 .container-fluid h1 {
     font-size: 50px;
+    padding: 10px;
 }
 
 .row {
@@ -34,11 +35,21 @@
 .row h4 {
     color: #c40000;
     font-weight: bold;
-    font-family: "Times New Roman", Georgia, Serif;
-    font-size: 35px;
+    font-family: serif;
+    font-size: 30px;
+    padding: 10px;
 }
 
 .row p {
-    font-family: "Times New Roman", Georgia, Serif;
-    font-size: 25px;
+    font-family: serif;
+    font-size: 20px;
+}
+
+textarea {
+    font-size: 20px !important;
+    font-family: serif !important;
+    width: 173px !important;
+    height: 50px !important;
+    text-align: center !important;
+    line-height: 49px !important;
 }
