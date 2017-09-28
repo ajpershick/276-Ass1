@@ -62,4 +62,13 @@ textarea {
     height: 50px !important;
     text-align: center !important;
     line-height: 49px !important;
+    resize: none;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+textarea:focus {
+    -webkit-box-shadow: 0px 0px 4px #4195fc;
+    -moz-box-shadow: 0px 0px 4px #4195fc;
+    box-shadow: 0px 0px 4px #4195fc;
 }
