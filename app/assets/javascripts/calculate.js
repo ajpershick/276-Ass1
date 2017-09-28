@@ -57,29 +57,29 @@ function calculate()
     val11='';
 
     for (i=0; i < grades.length; i++) {
-        console.log(grades[i]);
+
         if (grades[i] >= aPlus)
-            val1 += 'O';
+            val1 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
         else if (grades[i] >= a)
-            val2 += 'O';
+            val2 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
         else if (grades[i] >= aMinus)
-            val3 += 'O';
+            val3 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
         else if (grades[i] >= bPlus)
-            val4 += 'O';
+            val4 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
         else if (grades[i] >= b)
-            val5 += 'O';
+            val5 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
         else if (grades[i] >= bMinus)
-            val6 += 'O';
+            val6 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
         else if (grades[i] >= cPlus)
-            val7 += 'O';
+            val7 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
         else if(grades[i] >= c)
-            val8 += 'O';
+            val8 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
         else if (grades[i] >= cMinus)
-            val9 += 'O';
+            val9 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
         else if (grades[i] >= d)
-            val10 += 'O';
+            val10 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
         else if (grades[i] <= f)
-            val11 += 'O';
+            val11 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
     }
     push('hist1', val1);
     push('hist2', val2);

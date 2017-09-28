@@ -24,6 +24,16 @@
     border-radius: 5px;
 }
 
+.col-xs-8 {
+    padding: 15px;
+}
+
+.glyphicon {
+    float:left !important;
+    line-height: 0px !important;
+    top: 0px !important;
+}
+
 .hist_grades {
     padding: 40px;
 }
