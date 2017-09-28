@@ -2,18 +2,6 @@
 var grades = [65.95, 56.98, 78.62, 96.1, 90.3, 72.24, 92.34, 60.00, 81.43, 86.22, 88.33, 9.03,
               49.93, 52.34, 53.11, 50.10, 88.88, 55.32, 55.69, 61.68, 70.44, 70.54, 90.0, 71.11, 80.01];
 
-var val1=0;
-var val2=0;
-var val3=0;
-var val4=0;
-var val5=0;
-var val6=0;
-var val7=0;
-var val8=0;
-var val9=0;
-var val10=0;
-var val11=0;
-
 // Stores input from text box into a var
 
 function getData(parameter)
@@ -21,11 +9,29 @@ function getData(parameter)
     return document.getElementById(parameter).value;
 }
 
+function checkNum(evt, parameter) {
+    var theEvent = evt || window.event;
+    var key = theEvent.keyCode || theEvent.which;
+    // Don't validate the input if below arrow, delete and backspace keys were pressed
+    if(key == 37 || key == 38 || key == 39 || key == 40 || key == 8 || key == 46) { // Left / Up / Right / Down Arrow, Backspace, Delete keys
+        return;
+    }
+    var x = parameter.value
+    var regex = '^\\d+$';
+    if (!x.match(regex)) {
+        alert("Must input numbers");
+        return false;
+    }
+    else
+        return x;
+}
+
+
 function push(x, y)
 {
     document.getElementById(x).innerHTML = y;
-
 }
+
 
 // Stores number of each range in each var (val#)
 
@@ -44,17 +50,10 @@ function calculate()
     var d = getData('D');
     var f = getData('F');
     var i;
-    val1='';
-    val2='';
-    val3='';
-    val4='';
-    val5='';
-    val6='';
-    val7='';
-    val8='';
-    val9='';
-    val10='';
-    val11='';
+
+
+    var val1='', val2='', val3='', val4='', val5='', val6='',
+        val7='', val8='', val9='', val10='', val11='';
 
     for (i=0; i < grades.length; i++) {
 
@@ -92,12 +91,5 @@ function calculate()
     push('hist9', val9);
     push('hist10', val10);
     push('hist11', val11);
-}
-
-
-
-function write(val)
-{
-    document.write(val);
 }
 

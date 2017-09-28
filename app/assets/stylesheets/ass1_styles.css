@@ -64,7 +64,7 @@ textarea {
     line-height: 49px !important;
     resize: none;
     white-space: nowrap;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 textarea:focus {
