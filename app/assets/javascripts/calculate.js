@@ -13,11 +13,11 @@ function checkNum(evt, parameter) {
     var theEvent = evt || window.event;
     var key = theEvent.keyCode || theEvent.which;
     // Don't validate the input if below arrow, delete and backspace keys were pressed
-    if(key == 37 || key == 38 || key == 39 || key == 40 || key == 8 || key == 46) { // Left / Up / Right / Down Arrow, Backspace, Delete keys
+    if(key == 37 || key == 38 || key == 39 || key == 40 || key == 8 || key == 46 || key == 190)  { // Left / Up / Right / Down Arrow, Backspace, Delete keys
         return;
     }
-    var x = parameter.value
-    var regex = '^\\d+$';
+    var x = parameter.value;
+    var regex ='^[0-9]+(([\,\.]?[0-9]+)*)?$';
     if (!x.match(regex)) {
         alert("Must input numbers");
         return false;
