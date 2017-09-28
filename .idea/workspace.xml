@@ -26,8 +26,8 @@
       <file leaf-file-name="ass1_styles.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/ass1_styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="61" column="28" lean-forward="true" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+            <state relative-caret-position="432">
+              <caret line="64" column="28" lean-forward="true" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -270,7 +270,7 @@
       <workItem from="1506476087263" duration="12494000" />
       <workItem from="1506540673522" duration="120000" />
       <workItem from="1506541184061" duration="4403000" />
-      <workItem from="1506549481359" duration="36021000" />
+      <workItem from="1506549481359" duration="36084000" />
     </task>
     <task id="LOCAL-00001" summary="Add histogram.html">
       <created>1506312007621</created>
@@ -297,7 +297,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80234000" />
+    <option name="totallyTimeSpent" value="80297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-6" width="2162" height="1440" extended-state="6" />
@@ -748,8 +748,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/ass1_styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="61" column="28" lean-forward="true" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+        <state relative-caret-position="432">
+          <caret line="64" column="28" lean-forward="true" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
           <folding />
         </state>
       </provider>
