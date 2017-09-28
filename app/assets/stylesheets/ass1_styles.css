@@ -61,10 +61,10 @@ textarea {
     width: 173px !important;
     height: 50px !important;
     text-align: center !important;
-    line-height: 49px !important;
+    line-height: 45px !important;
     resize: none;
     white-space: nowrap;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 textarea:focus {
