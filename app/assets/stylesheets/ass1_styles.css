@@ -53,11 +53,12 @@
 .row p {
     font-family: serif;
     font-size: 20px;
+    font-weight: bold;
 }
 
 textarea {
     font-size: 20px !important;
-    font-family: serif !important;
+    font-family: "Century Schoolbook L" !important;
     width: 173px !important;
     height: 50px !important;
     text-align: center !important;

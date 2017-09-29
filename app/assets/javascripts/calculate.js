@@ -13,13 +13,13 @@ function checkNum(evt, parameter) {
     var theEvent = evt || window.event;
     var key = theEvent.keyCode || theEvent.which;
     // Don't validate the input if below arrow, delete and backspace keys were pressed
-    if(key == 37 || key == 38 || key == 39 || key == 40 || key == 8 || key == 46 || key == 190)  { // Left / Up / Right / Down Arrow, Backspace, Delete keys
+    if(key === 37 || key === 38 || key === 39 || key === 40 || key === 8 || key === 46 || key === 190)  { // Left / Up / Right / Down Arrow, Backspace, Delete keys
         return;
     }
     var x = parameter.value;
     var regex ='^[0-9]+(([\,\.]?[0-9]+)*)?$';
     if (!x.match(regex)) {
-        alert("You must input numbers for grades!");
+        window.alert("You must input numbers for grades!");
         return false;
     }
     else
@@ -31,7 +31,6 @@ function push(x, y)
 {
     document.getElementById(x).innerHTML = y;
 }
-
 
 // Stores number of each range in each var (val#)
 
@@ -50,34 +49,45 @@ function calculate()
     var d = getData('D');
     var f = getData('F');
     var i;
+    var j;
 
+    var array = [Max, aPlus, a, aMinus, bPlus, b, bMinus, cPlus, c, cMinus, d, f];
+
+    for (j=0; j < array.length-1; j++)
+    {
+        if (Number(array[j+1]) > Number(array[j]))
+        {
+            window.alert(array[j+1] + ' is greater than ' + array[j] + '. You will see incorrect results until you fix this!');
+            return;
+        }
+    }
 
     var val1='', val2='', val3='', val4='', val5='', val6='',
         val7='', val8='', val9='', val10='', val11='';
 
-    for (i=0; i < grades.length; i++) {
-
-        if (grades[i] >= aPlus && aPlus >= 0 && aPlus != '')
+    for (i=0; i < grades.length; i++)
+    {
+        if (grades[i] >= aPlus && aPlus != '')
             val1 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] >= a && a >= 0 && a != '')
+        else if (grades[i] >= a && a != '')
             val2 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] >= aMinus && aMinus >= 0 && aMinus != '')
+        else if (grades[i] >= aMinus && aMinus != '')
             val3 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] >= bPlus && bPlus >= 0 && bPlus != '')
+        else if (grades[i] >= bPlus && bPlus != '')
             val4 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] >= b && b >= 0 && b != '')
+        else if (grades[i] >= b && b != '')
             val5 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] >= bMinus && bMinus >= 0 && bMinus != '')
+        else if (grades[i] >= bMinus && bMinus != '')
             val6 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] >= cPlus && cPlus >= 0 && cPlus != '')
+        else if (grades[i] >= cPlus && cPlus != '')
             val7 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if(grades[i] >= c && c >= 0 && c != '')
+        else if(grades[i] >= c && c != '')
             val8 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] >= cMinus && cMinus >= 0 && cMinus != '')
+        else if (grades[i] >= cMinus && cMinus != '')
             val9 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] >= d && d >= 0 && d != '')
+        else if (grades[i] >= d && d != '')
             val10 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] <= f && f >= 0 && f != '')
+        else if (grades[i] <= f && f != '')
             val11 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
     }
     push('hist1', val1);
@@ -92,4 +102,9 @@ function calculate()
     push('hist10', val10);
     push('hist11', val11);
 }
+
+window.onload = function()
+{
+    calculate();
+};
 
