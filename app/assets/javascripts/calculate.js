@@ -19,7 +19,7 @@ function checkNum(evt, parameter) {
     var x = parameter.value;
     var regex ='^[0-9]+(([\,\.]?[0-9]+)*)?$';
     if (!x.match(regex)) {
-        alert("Must input numbers");
+        alert("You must input numbers for grades!");
         return false;
     }
     else
@@ -57,27 +57,27 @@ function calculate()
 
     for (i=0; i < grades.length; i++) {
 
-        if (grades[i] >= aPlus)
+        if (grades[i] >= aPlus && aPlus >= 0 && aPlus != '')
             val1 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] >= a)
+        else if (grades[i] >= a && a >= 0 && a != '')
             val2 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] >= aMinus)
+        else if (grades[i] >= aMinus && aMinus >= 0 && aMinus != '')
             val3 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] >= bPlus)
+        else if (grades[i] >= bPlus && bPlus >= 0 && bPlus != '')
             val4 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] >= b)
+        else if (grades[i] >= b && b >= 0 && b != '')
             val5 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] >= bMinus)
+        else if (grades[i] >= bMinus && bMinus >= 0 && bMinus != '')
             val6 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] >= cPlus)
+        else if (grades[i] >= cPlus && cPlus >= 0 && cPlus != '')
             val7 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if(grades[i] >= c)
+        else if(grades[i] >= c && c >= 0 && c != '')
             val8 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] >= cMinus)
+        else if (grades[i] >= cMinus && cMinus >= 0 && cMinus != '')
             val9 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] >= d)
+        else if (grades[i] >= d && d >= 0 && d != '')
             val10 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] <= f)
+        else if (grades[i] <= f && f >= 0 && f != '')
             val11 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
     }
     push('hist1', val1);
