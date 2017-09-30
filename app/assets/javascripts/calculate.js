@@ -9,7 +9,33 @@ function getData(parameter)
     return document.getElementById(parameter).value;
 }
 
-function checkNum(evt, parameter) {
+function checkNum(evt, parameter)
+{
+    var Max = getData('Max');
+    var aPlus = getData('A+');
+    var a = getData('A');
+    var aMinus = getData('A-');
+    var bPlus = getData('B+');
+    var b = getData('B');
+    var bMinus = getData('B-');
+    var cPlus = getData('C+');
+    var c = getData('C');
+    var cMinus = getData('C-');
+    var d = getData('D');
+    var f = getData('F');
+    var i;
+    var j;
+    var array = [Max, aPlus, a, aMinus, bPlus, b, bMinus, cPlus, c, cMinus, d, f];
+
+    for (j=0; j < array.length-1; j++)
+    {
+        if (Number(array[j+1]) > Number(array[j]))
+        {
+            window.alert(array[j+1] + ' is greater than ' + array[j] + '. You will see incorrect results until you fix this!');
+            return;
+        }
+    }
+
     var theEvent = evt || window.event;
     var key = theEvent.keyCode || theEvent.which;
     // Don't validate the input if below arrow, delete and backspace keys were pressed
@@ -36,6 +62,7 @@ function push(x, y)
 
 function calculate()
 {
+
     var Max = getData('Max');
     var aPlus = getData('A+');
     var a = getData('A');
@@ -50,7 +77,7 @@ function calculate()
     var f = getData('F');
     var i;
     var j;
-
+/*
     var array = [Max, aPlus, a, aMinus, bPlus, b, bMinus, cPlus, c, cMinus, d, f];
 
     for (j=0; j < array.length-1; j++)
@@ -62,6 +89,7 @@ function calculate()
         }
     }
 
+*/
     var val1='', val2='', val3='', val4='', val5='', val6='',
         val7='', val8='', val9='', val10='', val11='';
 
@@ -87,7 +115,7 @@ function calculate()
             val9 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
         else if (grades[i] >= d && d != '')
             val10 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
-        else if (grades[i] <= f && f != '')
+        else if (grades[i] < d && f != '')
             val11 += "<div class='col-xs-1 glyphicon glyphicon-user'><div/>";
     }
     push('hist1', val1);
