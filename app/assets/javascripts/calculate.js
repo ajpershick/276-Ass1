@@ -77,19 +77,7 @@ function calculate()
     var f = getData('F');
     var i;
     var j;
-/*
-    var array = [Max, aPlus, a, aMinus, bPlus, b, bMinus, cPlus, c, cMinus, d, f];
 
-    for (j=0; j < array.length-1; j++)
-    {
-        if (Number(array[j+1]) > Number(array[j]))
-        {
-            window.alert(array[j+1] + ' is greater than ' + array[j] + '. You will see incorrect results until you fix this!');
-            return;
-        }
-    }
-
-*/
     var val1='', val2='', val3='', val4='', val5='', val6='',
         val7='', val8='', val9='', val10='', val11='';
 
